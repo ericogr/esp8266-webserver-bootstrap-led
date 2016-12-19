@@ -17,20 +17,21 @@ String webPage;
 
 int gpio4_pin = 4;
 
-void setup(void){
+void setup(void) {
   webPage =
-      "<h1>Ola ESP8266</h1>"
+      "<h2>Ola ESP8266</h2>"
+      "<img src=\"https://http2.mlstatic.com/S_618621-MLB20840995302_072016-Y.jpg\">"
       "<p>"
       "    LED - IO4"
       "    <a href=\"io4_ligar\">"
       "        <button>Ligar</button>"
-      "    </a>&nbsp;"
+      "    </a>"
       "    <a href=\"io4_desligar\">"
-      "        <button>Desligar</button></a>"
-      "</p>";;
+      "        <button>Desligar</button>"
+      "    </a>"
+      "</p>";
 
   Serial.begin(115200);
-  Serial.println("");
 
   // preparando GPIOs
   pinMode(gpio4_pin, OUTPUT);
@@ -40,7 +41,7 @@ void setup(void){
 
   WiFi.begin(ssid, password);
 
-  // Wait for connection
+  Serial.println("\nConectando com wifi...");
   while (WiFi.status() != WL_CONNECTED) {
     delay(200);
     Serial.print(".");
