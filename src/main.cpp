@@ -19,17 +19,28 @@ int gpio4_pin = 4;
 
 void setup(void) {
   webPage =
-      "<h2>Ola ESP8266</h2>"
-      "<img src=\"https://http2.mlstatic.com/S_618621-MLB20840995302_072016-Y.jpg\">"
-      "<p>"
-      "    LED - IO4"
-      "    <a href=\"io4_ligar\">"
-      "        <button>Ligar</button>"
-      "    </a>"
-      "    <a href=\"io4_desligar\">"
-      "        <button>Desligar</button>"
-      "    </a>"
-      "</p>";
+      "<html>"
+      "<head>"
+      "  <title>Hello ESP12 - ESP8266</title>"
+      "  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">"
+      "  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>"
+      "</head>"
+      "<body>"
+      "<div class=\"jumbotron\">"
+      "  <div class=\"container\">"
+      "    <h1>Hello ESP8266!</h1>"
+      "    <img src=\"https://s30.postimg.org/6w1onoa1t/esp12e.png\">"
+      "    <p>Pressione os bot&otilde;es para ligar e desligar o LED</p>"
+      "    <p>"
+      "      <a class=\"btn btn-danger btn-lg\" href=\"io4_ligar\" role=\"button\">Ligar &raquo;</a>"
+      "      <a class=\"btn btn-primary btn-lg\" href=\"io4_desligar\" role=\"button\">Desligar &raquo;</a>"
+      "    </p>"
+      "  </div>"
+      "</div>"
+      "<div class=\"container\">"
+      "</div>"
+      "</body>"
+      "</html>";
 
   Serial.begin(115200);
 
